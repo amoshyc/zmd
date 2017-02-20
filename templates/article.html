@@ -25,15 +25,27 @@
         </div>
         <!-- tags -->
         <div class="tags">
-            {% for tag in article.tags|sort %}
-            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-            {% endfor %}
+            <div class="tags-title">
+                <span>Tags</span>
+            </div>
+            <ul class="tags-tags">
+                {% for tag in article.tags|sort %}
+                    <li>
+                        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
         <!-- toc -->
         {% if article.toc %}
-        <div class="toc-container">
-            {{ article.toc }}
-        </div>
+        <ul class="toc-container">
+            <li class="toc-title">
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    TOC
+                </a>
+                {{ article.toc }}
+            </li>
+        </ul>
         {% endif %}
     </div>
     {% set content_type =
