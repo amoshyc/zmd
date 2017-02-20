@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ article.title }} - {{ SITENAME }}
+{% endblock %}
+
+{% block header %}
+    {% from "macro/header.html" import header %}
+    {{ header(SITEURL, SITENAME, LINKS) }}
+{% endblock %}
+
+{% block content %}
+    <div class="article-info">
+        <!-- title -->
+        <h1 class="title">{{ article.title }}</h1>
+        <div class="meta">
+            <!-- time -->
+            <span class="time">{{ article.locale_date }}</span>
+            <!-- in -->
+            <span class="in">@</span>
+            <!-- category -->
+            <a class="category" href="{{ SITEURL }}/{{ article.category.url }}">
+                {{ article.category }}
+            </a>
+        </div>
+        <!-- tags -->
+        <div class="tags">
+            {% for tag in article.tags|sort %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        <!-- toc -->
+        {% if article.toc %}
+        <div class="toc-container">
+            {{ article.toc }}
+        </div>
+        {% endif %}
+    </div>
+    {% set content_type =
+        'md-content' if article.source_path[-3:] == '.md' else 'rst-content' %}
+    <div class="{{ content_type }}">
+        {{ article.content|safe }}
+    </div>
+{% endblock %}

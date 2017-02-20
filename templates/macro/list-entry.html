@@ -1,0 +1,12 @@
+{% macro list_entry(SITEURL, title, url, info) %}
+<div class="list-entry">
+    <span>
+        <a class="title" href="{{ SITEURL }}/{{ url }}">
+            {{ title }}
+        </a>
+    </span>
+    <span class="info">
+        {{ info }}
+    </span>
+</div>
+{% endmacro %}

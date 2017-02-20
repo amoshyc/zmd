@@ -1,0 +1,26 @@
+.path {
+    max-width: $max-width;
+    margin: 25px auto;
+    background: radial-gradient(#ccc, #fff);
+    background-position: bottom center;
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+
+    a {
+        color: $list-title-color;
+        font-size: $list-title-size;
+        font-family: 'Roboto Slab', sans;
+        line-height: $list-title-size * 2.0;
+        text-decoration: none;
+    }
+
+    span {
+        font-size: $list-title-size;
+        font-family: 'Roboto Slab', sans;
+        line-height: $list-title-size * 2.0;
+    }
+
+    a:hover {
+        color: lighten($list-title-color, 15%);
+    }
+}

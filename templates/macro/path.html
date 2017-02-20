@@ -1,0 +1,10 @@
+{% macro path(data) %}
+    <div class="path">
+        {% for text, url in data %}
+            {% if loop.index > 1 %}
+                <span> / </span>
+            {% endif %}
+            <a href="{{ SITEURL }}/{{ url }}">{{ text }}</a>
+        {% endfor %}
+    </div>
+{% endmacro %}

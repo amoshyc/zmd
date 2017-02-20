@@ -1,0 +1,50 @@
+header { // header container
+    display: flex;
+    flex-direction: column;
+    max-width: $max-width;
+    margin: $header-margin auto;
+    text-align: center;
+    // opacity: 0.75;
+    // transition: opacity 0.2s ease-in-out;
+    //
+    // &:hover {
+    //     opacity: 1.0;
+    // }
+
+    a.image {
+        img {
+            width: $header-img-size-large;
+            height: $header-img-size-large;
+            border-radius: $header-img-size-large / 2;
+        }
+    }
+
+    a.title {
+        text-decoration: none;
+
+        span { // header title(i.e. sitename)
+            margin: 10px auto;
+            color: $header-font-color;
+            font-size: $header-font-size;
+            font-family: 'Roboto Slab', serif;
+            line-height: $header-font-size * 2.0;
+        }
+    }
+
+    nav {
+        font-size: $header-font-size * 0.85;
+        font-family: 'Roboto Slab', serif;
+
+        a {
+            color: lighten($header-font-color, 10%);
+            text-decoration: none;
+            &:hover {
+                color: lighten($header-font-color, 30%);
+            }
+        }
+
+        a + a {
+            margin-left: 13px;
+        }
+    }
+}

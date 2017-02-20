@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Categories - {{ SITENAME }}
+{% endblock %}
+
+{% block header %}
+    {% from "macro/header.html" import header %}
+    {{ header(SITEURL, SITENAME, LINKS) }}
+{% endblock %}
+
+{% block content %}
+    <p class="list-header">Categories</p>
+    {% from "macro/list-entry.html" import list_entry %}
+    {% for category, articles in categories %}
+        {{ list_entry(SITEURL, category.name, category.url, articles|length|string + ' articles') }}
+    {% endfor %}
+{% endblock %}
+
+{% block paging %}
+{% endblock %}

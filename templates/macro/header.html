@@ -1,0 +1,15 @@
+{% macro header(SITEURL, SITENAME, LINKS) %}
+    <header>
+        <a class="image" href="{{ SITEURL }}/">
+            <img class="large" src="{{ SITEURL }}/theme/header-image.jpg"></div>
+        </a>
+        <a class="title" href="{{ SITEURL }}/">
+            <span>{{ SITENAME }}</span>
+        </a>
+        <nav>
+            {% for text, url in LINKS %}
+                <a href="{{ url }}">{{ text|upper }}</a>
+            {% endfor %}
+        </nav>
+    </header>
+{% endmacro %}

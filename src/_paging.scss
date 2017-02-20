@@ -1,0 +1,47 @@
+.paging {
+    max-width: $max-width;
+    margin: $paging-height auto;
+    height: $paging-height;
+
+    .clickable {
+        display: inline-block;
+        font-family: 'Roboto Slab', sans;
+        font-size: $paging-font-size;
+        line-height: $paging-height;
+        text-decoration: none;
+        color: $paging-clikable-color;
+
+        &:hover {
+            color: lighten($paging-clikable-color, 15%);
+        }
+    }
+
+    .prev {
+        @extend .clickable;
+        float: left;
+    }
+    .next {
+        @extend .clickable;
+        float: right;
+    }
+    .numbers {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        letter-spacing: 4px;
+
+        a.current {
+            @extend .clickable;
+            font-family: 'Roboto', sans;
+            color: $paging-current-color;
+            &:hover {
+                color: $paging-current-color;
+            }
+        }
+
+        a.other {
+            @extend .clickable;
+            font-family: 'Roboto', sans;
+        }
+    }
+}

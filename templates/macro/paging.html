@@ -1,0 +1,25 @@
+{% macro paging(cur_num, num_pages, pagename, prev_url, next_url) %}
+
+{% if num_pages > 1 %}
+    <div class="paging">
+        {% if prev_url %}
+            <a class="prev" href="{{ SITEURL }}/{{ prev_url }}">Prev</a>
+        {% endif %}
+
+        <div class="numbers">
+            {% for i in range(1, num_pages + 1) %}
+                {% set class = 'current' if i == cur_num else 'other' %}
+                {% set idx = i if i > 1 else '' %}
+                <a class="{{ class }}" href="{{ SITEURL }}/{{ pagename }}{{ idx }}.html">
+                    {{ i }}
+                </a>
+            {% endfor %}
+        </div>
+
+        {% if next_url %}
+            <a class="next" href="{{ SITEURL }}/{{ next_url }}">Next</a>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% endmacro %}
