@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Tags - {{ SITENAME }}
+{% endblock %}
+
+{% block header %}
+    {% from "macro/header.html" import header %}
+    {{ header(SITEURL, SITENAME, LINKS) }}
+{% endblock %}
+
+{% block content %}
+    <p class="list-header">Tags</p>
+    <div class="tags">
+        {% for tag in tag_cloud %}
+            <a class="tag-{{ tag.1 }}" href="{{ SITEURL }}/{{ tag.0.url }}">
+                {{ tag.0 }}
+                {% if TAG_CLOUD_BADGE %}
+                    <span class="badge">({{ tag.2 }})</span>
+                {% endif %}
+            </a>
+            <span>&nbsp;</span>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block paging %}
+{% endblock %}

@@ -55,6 +55,10 @@
         ul {
             color: $primary-color;
             padding-left: $basic-font-size;
+
+            li {
+                margin-top: 4px;
+            }
         }
     }
 
