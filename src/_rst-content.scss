@@ -1,20 +1,17 @@
 .rst-content {
     color: $fg-color;
     font-family: 'Roboto', sans;
+    font-family: 'Oxygen Mono', monospace;
     font-size: $basic-font-size;
     line-height: $basic-font-size * 1.35;
 
     p {
         margin: 18px 0px;
         font-size: 100%;
+        white-space: pre-wrap;
     }
 
-    .mono {
-        font-family: 'Oxygen Mono', monospace;
-        background-color: lighten($bg-color, 2%);
-    }
-
-    a.reference.external {
+    a.reference {
         color: $primary-color;
         text-decoration: none;
         &:hover {
@@ -71,28 +68,39 @@
         padding-left: 20px;
     }
 
+    tt { // inline literal
+        color: #F57C00; // mdl orange 700
+        margin-left: 2px;
+        margin-right: 2px;
+        font-family: 'Oxygen Mono', monospace;
+        font-size: $basic-font-size * 0.9;
+    }
+
     pre.literal-block {
-        @extend .mono;
-        clear: both;
+        clear: both; // in case it overlaps with sidebar
+        margin: 25px 0px;
         padding: 8px 8px;
         border: 1px solid #ccc;
         overflow: auto;
         white-space: pre-wrap;
+        font-family: 'Oxygen Mono', monospace;
         font-size: $basic-font-size * 0.85;
         line-height: $basic-font-size * 0.85 * 1.35;
+        background-color: lighten($bg-color, 2%);
+    }
+
+    .line-block {
+        margin: $basic-font-size * 0.7 0px;
+        padding-left: 2 * $basic-font-size;
+        border-left: 2px solid #8BC34A; // mdl light green 500
+        .line {
+            white-space: pre-wrap;
+        }
     }
 
     .sidebar {
         @extend .util-block;
         float: right;
-
-        &:after {
-            content: '.';
-            visibility: hidden;
-            height: 0px;
-            display: block;
-            clear: both;
-        }
 
         .sidebar-title {
             @extend .util-block-title;
@@ -104,21 +112,36 @@
         }
     }
 
-    .note {
+    .admonition {
         @extend .util-block;
-        margin-left: 0px;
-        margin-right: 0px;
-        border-color: white;
+        margin: 20px 0px;
+        border-color: $bg-color;
 
         .admonition-title {
             @extend .util-block-title;
             margin: 0px;
             color: white;
-            background-color: #64B5F6;
         }
 
         & > *:not(.admonition-title) {
             @extend .util-block-content;
         }
+    }
+
+    .note {
+        .admonition-title {
+            background-color: #64B5F6;
+        }
+    }
+
+    .warning {
+        .admonition-title {
+            background-color: #f44336; // mdl red 500
+        }
+    }
+
+    hr {
+        margin: 24px 0px;
+        border-color: rgba(255, 255, 255, 0.4);
     }
 }
