@@ -6,7 +6,12 @@ var gulp = require('gulp'),
 gulp.task('styles', function () {
     gulp.src('./src/style.scss')
         .pipe(sass({
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
+            includePaths: [
+                './bower_components/' + '/wyrm/sass',
+                './bower_components/' + '/neat/app/assets/stylesheets',
+                './bower_components/' + '/bourbon/dist',
+                './bower_components/' + '/font-awesome/scss']
         }))
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('./static'));

@@ -2,9 +2,8 @@
     .title {
         color: $info-title-color;
         margin: 0px 0px;
-        font-size: $basic-font-size * 1.75;
+        @include util-header('H1', 175%);
         line-height: $basic-font-size * 3.0;
-        @include util-header('H1');
     }
 
     .meta {

@@ -25,43 +25,31 @@
     }
 
     h1 {
-        font-size: 175%;
-        line-height: 175%;
-        @include util-header('H1');
+        @include util-header('H1', 175%);
     }
 
     h2 {
-        font-size: 150%;
-        line-height: 150%;
-        @include util-header('H2');
+        @include util-header('H2', 150%);
     }
 
     h3 {
-        font-size: 140%;
-        line-height: 140%;
         font-family: 'Roboto Slab', serif;
-        @include util-header('H3');
+        @include util-header('H3', 140%);
     }
 
     h4 {
-        font-size: 130%;
-        line-height: 130%;
         font-family: 'Roboto Slab', serif;
-        @include util-header('H4');
+        @include util-header('H4', 130%);
     }
 
     h5 {
-        font-size: 120%;
-        line-height: 120%;
         font-family: 'Roboto Slab', serif;
-        @include util-header('H5');
+        @include util-header('H5', 120%);
     }
 
     h6 {
-        font-size: 110%;
-        line-height: 110%;
         font-family: 'Roboto Slab', serif;
-        @include util-header('H6');
+        @include util-header('H6', 110%);
     }
 
     ul {
@@ -75,7 +63,6 @@
     }
 
     pre.literal-block {
-        clear: both; // in case it overlaps with sidebar
         margin: 25px 0px;
         padding: 8px 8px;
         border: 1px solid #ccc;
@@ -90,16 +77,87 @@
     .line-block {
         margin: $basic-font-size * 0.7 0px;
         padding-left: 2 * $basic-font-size;
-        // border-left: 2px solid #8BC34A; // mdl light green 500
         border-left: 2px solid #ddd;
         .line {
             white-space: pre-wrap;
         }
     }
 
+    table.highlighttable {
+        margin-left: -40px;
+        border: none;
+
+        tbody, tr, td, pre, div {
+            padding: 0px;
+            border: none;
+        }
+
+        pre {
+            margin: 10px 0px;
+            font-size: $basic-font-size * 0.85;
+            line-height: $basic-font-size * 0.85 * 1.3;
+            font-family: 'Oxygen Mono', monospace;
+        }
+
+        td.linenos {
+            vertical-align: top;
+
+            div.linenodiv {
+                pre {
+                    color: #ddd;
+                    font-size: $basic-font-size * 0.8;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: 40px;
+                }
+            }
+        }
+
+        td.code {
+            vertical-align: top;
+
+            div.highlight {
+                padding: 0px 10px;
+                max-width: $max-width;
+                overflow-x: auto;
+                // border: 1px solid #ccc;
+                // border will overlap scrollbar, so I use outline instead
+                outline: 1px solid #ccc;
+                background-color: #fff;
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        tbody {
+            border-top: 2px double #ccc;
+        }
+
+        thead {
+            tr {
+                color: black;
+                background-color: darken($bg-color, 9%);
+            }
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background-color: darken($bg-color, 4%);
+            }
+        }
+    }
+
     .sidebar {
         @extend .util-block;
         float: right;
+        clear: right;
 
         .sidebar-title {
             @extend .util-block-title;
@@ -137,6 +195,7 @@
     .warning {
         .admonition-title {
             background-color: #f44336; // mdl red 500
+            border: 1px solid #f44336;
         }
     }
 

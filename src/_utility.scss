@@ -1,6 +1,8 @@
-@mixin util-header($content) {
+@mixin util-header($content, $scale) {
     font-weight: normal;
     font-family: 'Roboto Slab', serif;
+    font-size: $scale;
+    line-height: $scale;
     &:before {
         content: $content;
         position: absolute;
