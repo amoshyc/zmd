@@ -2,9 +2,9 @@
 
 @import "variables.scss";
 @import "utility.scss";
-// @import "rst-default.scss";
+@import "pygments.scss";
+@import "asciimath.scss";
 @import "rst-content.scss";
-// @import "rst-content.sass";
 
 // macro
 @import "paging.scss";

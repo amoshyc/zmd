@@ -1,0 +1,15 @@
+.asciimath-block {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .asciimath-line {
+        display: inline-block;
+        margin: 8px 0;
+    }
+}
+
+.asciimath-inline {
+    // font-size: 90%;
+}

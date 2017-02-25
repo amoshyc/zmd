@@ -83,11 +83,39 @@
         }
     }
 
+    table {
+        border-collapse: collapse;
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        tbody {
+            border-top: 2px double #ccc;
+        }
+
+        thead {
+            tr {
+                color: black;
+                background-color: darken($bg-color, 9%);
+            }
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background-color: darken($bg-color, 4%);
+            }
+        }
+    }
+
     table.highlighttable {
+        @extend .pygments;
         margin-left: -40px;
         border: none;
 
         tbody, tr, td, pre, div {
+            background-color: $bg-color;
             padding: 0px;
             border: none;
         }
@@ -124,32 +152,6 @@
                 // border will overlap scrollbar, so I use outline instead
                 outline: 1px solid #ccc;
                 background-color: #fff;
-            }
-        }
-    }
-
-    table {
-        border-collapse: collapse;
-
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-
-        tbody {
-            border-top: 2px double #ccc;
-        }
-
-        thead {
-            tr {
-                color: black;
-                background-color: darken($bg-color, 9%);
-            }
-        }
-
-        tbody {
-            tr:nth-child(even) {
-                background-color: darken($bg-color, 4%);
             }
         }
     }
