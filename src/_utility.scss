@@ -3,6 +3,8 @@
     font-family: 'Roboto Slab', serif;
     font-size: $scale;
     line-height: $scale;
+    // border-bottom: 1px solid #ddd;
+
     &:before {
         content: $content;
         position: absolute;

@@ -27,3 +27,8 @@ main {
     background-size: 50% 1px;
     background-repeat: no-repeat;
 }
+
+::selection {
+    color: white;
+    background-color: #4cae7b;
+}
