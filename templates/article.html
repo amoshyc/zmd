@@ -11,9 +11,8 @@
 
 {% block content %}
     <div class="article-info">
-        <!-- title -->
-        <h1 class="title">{{ article.title }}</h1>
-        <div class="meta">
+        <!-- time and category -->
+        <div class="top">
             <!-- time -->
             <span class="time">{{ article.locale_date }}</span>
             <!-- in -->
@@ -23,19 +22,19 @@
                 {{ article.category }}
             </a>
         </div>
+
+        <!-- title -->
+        <h1 class="title">{{ article.title }}</h1>
+
         <!-- tags -->
-        <div class="tags">
-            <div class="tags-title">
-                <span>Tags</span>
-            </div>
-            <ul class="tags-tags">
-                {% for tag in article.tags|sort %}
-                    <li>
-                        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+        <div class="bottom">
+            {% for tag in article.tags|sort %}
+                <span>
+                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                </span>
+            {% endfor %}
         </div>
+
         <!-- toc -->
         {% if article.toc %}
         <ul class="toc-container">

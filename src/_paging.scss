@@ -32,7 +32,7 @@
 
         a.current {
             @extend .clickable;
-            font-family: 'Roboto', sans;
+            font-family: 'Bitter', sans;
             color: $paging-current-color;
             &:hover {
                 color: $paging-current-color;
@@ -41,7 +41,7 @@
 
         a.other {
             @extend .clickable;
-            font-family: 'Roboto', sans;
+            font-family: 'Bitter', sans;
         }
     }
 }

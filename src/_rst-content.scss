@@ -1,17 +1,24 @@
-
 .rst-content {
     color: $fg-color;
-    font-family: 'Roboto', 'Source Han Sans TW', 'Noto Sans CJK TC', 'Noto Sans TC'; // last one is web font
+    font-family: 'Bitter', 'Source Han Sans TW', 'Noto Sans CJK TC', 'Noto Sans TC'; // last one is web font
     font-size: $basic-font-size;
     line-height: $basic-font-size * 1.35;
 
     p {
-        color: lighten($fg-color, 10%);
+        color: $fg-color;
         margin: 18px 0px;
         white-space: pre-wrap;
         font-size: 105%;
         line-height: $basic-font-size * 1.6;
-        word-spacing: 0.8px;
+        text-align: justify;
+    }
+
+    img {
+        max-width: 90vw;
+        margin: 18px 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9, 0.9);
     }
 
     a.reference {
@@ -27,29 +34,17 @@
         text-decoration: none;
     }
 
-    h1 {
-        @include util-header('H1', 175%);
-    }
+    h1 { @include util-header('H1', 175%); }
 
-    h2 {
-        @include util-header('H2', 150%);
-    }
+    h2 { @include util-header('H2', 150%); }
 
-    h3 {
-        @include util-header('H3', 140%);
-    }
+    h3 { @include util-header('H3', 140%); }
 
-    h4 {
-        @include util-header('H4', 130%);
-    }
+    h4 { @include util-header('H4', 130%); }
 
-    h5 {
-        @include util-header('H5', 120%);
-    }
+    h5 { @include util-header('H5', 120%); }
 
-    h6 {
-        @include util-header('H6', 110%);
-    }
+    h6 { @include util-header('H6', 110%); }
 
     ul {
     }
@@ -121,7 +116,7 @@
             margin: 10px 0px;
             font-size: $basic-font-size * 0.85;
             line-height: $basic-font-size * 0.85 * 1.3;
-            font-family: 'Roboto Mono', monospace;
+            font-family: 'Oxygen Mono', monospace;
         }
 
         td.linenos {
@@ -145,6 +140,7 @@
             div.highlight {
                 padding: 0px 10px;
                 max-width: $max-width;
+                min-width: $max-width;
                 overflow-x: auto;
                 // border: 1px solid #ccc;
                 // border will overlap scrollbar, so I use outline instead
