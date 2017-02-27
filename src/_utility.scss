@@ -1,12 +1,14 @@
 @mixin util-header($content, $scale) {
-    // font-weight: bold;
-    font-weight: normal;
+    font-weight: bold;
+    // font-weight: normal;
     font-family: 'Roboto Slab', serif;
     font-size: $scale;
     line-height: $scale;
-    border-bottom: 1px solid #ccc;
+    color: $fg-color;
+    // border-bottom: 1px solid #ccc;
 
     &:before {
+        font-weight: normal;
         content: $content;
         position: absolute;
         margin-left: -50px;
