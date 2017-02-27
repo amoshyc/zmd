@@ -55,7 +55,7 @@
 {% endblock %}
 
 {% block share %}
-{% set url = SITEURL + article.url %}
+{% set url = SITEURL + '/' + article.url %}
 <div class="share-icons">
     <a class="icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url }}">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
