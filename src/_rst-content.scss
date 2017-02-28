@@ -2,14 +2,14 @@
     color: $fg-color;
     font-family: 'Bitter', 'Source Han Sans TW', 'Noto Sans CJK TC', 'Noto Sans TC'; // last one is web font
     font-size: $basic-font-size;
-    line-height: $basic-font-size * 1.35;
+    line-height: $basic-font-size;
 
     p {
         color: $fg-color;
-        margin: 18px 0px;
+        margin: $basic-font-size 0px;
         white-space: pre-wrap;
         font-size: 105%;
-        line-height: $basic-font-size * 1.6;
+        line-height: 160%;
         // text-align: justify;
         letter-spacing: 0.4px;
     }
@@ -22,7 +22,7 @@
         transform: translateX(-50%) scale(0.9, 0.9);
     }
 
-    a.reference {
+    a {
         color: $primary-color;
         text-decoration: none;
         &:hover {
@@ -30,9 +30,12 @@
         }
     }
 
-    a.toc-backref {
-        color: $fg-color;
-        text-decoration: none;
+    ol, ul {
+        padding-left: 2 * $basic-font-size;
+
+        li {
+            line-height: 150%;
+        }
     }
 
     h1 { @include util-header('H1', 175%); }
@@ -53,18 +56,18 @@
     tt { // inline literal
         color: #F57C00; // mdl orange 700
         font-family: 'Oxygen Mono', monospace;
-        font-size: $basic-font-size * 0.95;
+        font-size: 95%;
     }
 
     pre.literal-block {
         margin: 25px 0px;
-        padding: 8px 8px;
+        padding: 10px 10px;
         border: 1px solid #ccc;
         overflow: auto;
         white-space: pre-wrap;
         font-family: 'Oxygen Mono', monospace;
-        font-size: $basic-font-size * 0.85;
-        line-height: $basic-font-size * 0.85 * 1.35;
+        font-size: 85%;
+        line-height: calc(85% * 135%);
         background-color: lighten($bg-color, 2%);
     }
 
@@ -77,12 +80,14 @@
         }
     }
 
-    table {
+    table.docutils {
         border-collapse: collapse;
+        font-size: 100%;
 
         th, td {
             border: 1px solid #ccc;
             padding: 10px;
+            text-align: left;
         }
 
         tbody {
@@ -92,13 +97,13 @@
         thead {
             tr {
                 color: black;
-                background-color: darken($bg-color, 9%);
+                background-color: $bg-color;
             }
         }
 
         tbody {
-            tr:nth-child(even) {
-                background-color: darken($bg-color, 4%);
+            tr:nth-child(odd) {
+                background-color: #f4f4f4;
             }
         }
     }
@@ -115,8 +120,8 @@
 
         pre {
             margin: 10px 0px;
-            font-size: $basic-font-size * 0.85;
-            line-height: $basic-font-size * 0.85 * 1.3;
+            font-size: 85%;
+            line-height: calc(85% * 130%);
             font-family: 'Oxygen Mono', monospace;
         }
 
@@ -127,7 +132,7 @@
                 pre {
                     color: #ddd;
                     background-color: $bg-color;
-                    font-size: $basic-font-size * 0.8;
+                    font-size: 80%;
                     vertical-align: middle;
                     text-align: center;
                     width: 40px;
@@ -148,6 +153,33 @@
                 outline: 1px solid #ccc;
                 background-color: #fff;
             }
+        }
+    }
+
+    a.toc-backref {
+        color: $fg-color;
+        text-decoration: none;
+    }
+
+    // footnote, citation
+    a.footnote-reference, a.citation-reference {
+        vertical-align: super;
+        text-decoration: none;
+        font-size: 70%;
+    }
+    table.footnote, table.citation {
+        td {
+            background-color: $bg-color;
+            font-size: 85%;
+            color: #999;
+            border: none;
+        }
+        a.fn-backref {
+            text-decoration: none;
+        }
+        em {
+            font-style: normal;
+            padding-right: 5px;
         }
     }
 
