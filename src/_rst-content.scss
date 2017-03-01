@@ -20,10 +20,11 @@
 
     img {
         max-width: 90vw;
-        margin: 18px 0;
+        margin: 20px 0;
         position: relative;
         left: 50%;
-        transform: translateX(-50%) scale(0.9, 0.9);
+        transform: translateX(-50%);
+        border: 1px solid #ccc;
     }
     .caption {
         font-size: 90%;
@@ -31,6 +32,9 @@
     }
     div.legend {
         font-size: 90%;
+    }
+    img + img {
+        margin-top: 0px;
     }
 
     a {
@@ -170,6 +174,7 @@
 
         td.linenos {
             vertical-align: top;
+            background-color: $bg-color;
 
             div.linenodiv {
                 pre {
@@ -256,10 +261,10 @@
     }
 
     // list style
-    ol.upperroman {list-style-type: upper-roman;}
-    ol.lowerroman {list-style-type: lower-roman;}
-    ol.loweralpha {list-style-type: lower-alpha;}
-    ol.upperalpha {list-style-type: upper-alpha;}
+    ol.upperroman { list-style-type: upper-roman; }
+    ol.lowerroman { list-style-type: lower-roman; }
+    ol.loweralpha { list-style-type: lower-alpha; }
+    ol.upperalpha { list-style-type: upper-alpha; }
 
     .sidebar {
         @extend .util-block;
@@ -270,6 +275,9 @@
         .sidebar-title {
             @extend .util-block-title;
             margin: 0px;
+        }
+
+        .sidebar-subtitle {
         }
 
         & > *:not(.sidebar-title) {
@@ -326,6 +334,17 @@
     .topic-title, .rubric {
         font-weight: bold;
         font-size: 105%;
+    }
+
+    // toc
+    div.contents {
+        margin-top: 20px;
+        .topic-title {
+            font-weight: normal;
+        }
+        ul {
+            margin-top: 0px;
+        }
     }
 
     hr {
