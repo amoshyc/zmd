@@ -238,6 +238,7 @@
         td {
             background-color: $bg-color;
             font-size: 85%;
+            line-height: 135%;
             color: #999;
             border: none;
         }
@@ -247,6 +248,10 @@
         em {
             font-style: normal;
             padding-right: 5px;
+        }
+        p {
+            color: #999;
+            line-height: 135%;
         }
     }
 
@@ -292,8 +297,8 @@
 
     .attention, .caution, .warning {
         .admonition-title {
-            background-color: #7CB342;
-            border: 1px solid #7CB342;
+            background-color: #FFC107;
+            border: 1px solid #FFC107;
         }
     }
 
