@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter:400,700|Roboto+Slab:400,700|Oxygen Mono');
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+}
 
 @import "variables.scss";
 @import "utility.scss";

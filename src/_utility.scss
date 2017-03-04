@@ -1,7 +1,7 @@
 @mixin util-header($content, $scale) {
     font-weight: bold;
     // font-weight: normal;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC';
     font-size: $scale;
     line-height: $scale;
     color: $fg-color;
