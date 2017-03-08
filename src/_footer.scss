@@ -6,6 +6,16 @@ footer {
     background-size: 100% 1px;
     background-repeat: no-repeat;
 
+    a.top {
+        float: right;
+        padding-top: 10px;
+        color: $footer-font-color;
+        font-size: $footer-font-size;
+        font-family: 'Roboto Slab', serif;
+        line-height: $footer-font-size * 1.7;
+        text-decoration: underline;
+    }
+
     p {
         padding-top: 10px;
         color: $footer-font-color;

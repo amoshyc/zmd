@@ -226,6 +226,10 @@
         }
     }
 
+    div.contents { // TOC
+        // font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC';
+    }
+
     a.toc-backref {
         color: $fg-color;
         text-decoration: none;
