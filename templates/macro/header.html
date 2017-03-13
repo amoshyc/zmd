@@ -12,7 +12,7 @@
         </div>
         <nav>
             {% for text, url in LINKS %}
-                <a href="{{ url }}">{{ text|upper }}</a>
+                <a href="{{ SITEURL }}/{{ url }}">{{ text|upper }}</a>
             {% endfor %}
         </nav>
     </header>
