@@ -9,11 +9,15 @@
         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
 }
 
-@import "variables.scss";
-@import "utility.scss";
-@import "pygments.scss";
+// @import "variables.scss"; // light theme
+@import "variables-dark.scss"; // dark theme
+// @import "utility.scss"; // light theme
+@import "utility-dark.scss"; // dark theme
+// @import "pygments.scss"; // light theme
+@import "pygments-dark.scss"; // dark theme
 @import "rst-content.scss";
-@import "md-content.scss";
+// @import "md-content.scss"; // light theme
+@import "md-content-dark.scss"; // dark theme
 
 // macro
 @import "paging.scss";
@@ -24,7 +28,8 @@
 
 // templates' style
 @import "base.scss";
-@import "article.scss";
+// @import "article.scss"; // light theme
+@import "article-dark.scss"; // dark theme
 @import "tags.scss";
 
 // @media screen and (max-width: $max-width) {

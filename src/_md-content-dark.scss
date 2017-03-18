@@ -65,7 +65,8 @@
         }
     }
 
-    h1 { @include util-header('H1', 175%); }
+    h1 { @include util-header('H1', 175%);
+        color: #cfcf9f; /*dark theme for h1*/}
 
     h2 { @include util-header('H2', 150%); }
 
@@ -179,7 +180,7 @@
 
             div.linenodiv {
                 pre {
-                    color: #ddd;
+                    color: #90b2bd; // dark theme
                     background-color: $bg-color;
                     font-size: 80%;
                     vertical-align: middle;
@@ -200,7 +201,7 @@
                 // border: 1px solid #ccc;
                 // border will overlap scrollbar, so I use outline instead
                 outline: 1px solid #a8a8a8;
-                background-color: #fff;
+                background-color: #b3c59e; // dark theme
             }
         }
     }
@@ -364,6 +365,6 @@
     code {
         font-family: 'Oxygen Mono', monospace;
         font-size: 85%;
-        color: #F57C00;
+        color: #FFA000; // dark theme mdl-color--amber-700
     }
 }
