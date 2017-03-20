@@ -4,11 +4,6 @@
     {{ category.name }} - {{ SITENAME }}
 {% endblock %}
 
-{% block header %}
-    {% from "macro/header.html" import header %}
-    {{ header(SITEURL, SITENAME, LINKS) }}
-{% endblock %}
-
 {% block content %}
     <p class="list-header">Category: {{ category.name }}</p>
     {% from "macro/list-entry.html" import list_entry %}

@@ -4,11 +4,6 @@
     Tags - {{ SITENAME }}
 {% endblock %}
 
-{% block header %}
-    {% from "macro/header.html" import header %}
-    {{ header(SITEURL, SITENAME, LINKS) }}
-{% endblock %}
-
 {% block content %}
     <p class="list-header">Tags</p>
     <div class="tags">

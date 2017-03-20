@@ -4,11 +4,6 @@
     {{ article.title }} - {{ SITENAME }}
 {% endblock %}
 
-{% block header %}
-    {% from "macro/header.html" import header %}
-    {{ header(SITEURL, SITENAME, LINKS) }}
-{% endblock %}
-
 {% block content %}
     <div class="article-info">
         <!-- time and category -->
@@ -53,7 +48,7 @@
     <div class="{{ content_type }}">
         {{ article.content|safe }}
     </div>
-    
+
 {% endblock %}
 
 {% block share %}
