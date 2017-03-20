@@ -47,11 +47,13 @@
         </ul>
         {% endif %}
     </div>
+
     {% set content_type =
         'md-content' if article.source_path[-3:] == '.md' else 'rst-content' %}
     <div class="{{ content_type }}">
         {{ article.content|safe }}
     </div>
+    
 {% endblock %}
 
 {% block share %}
