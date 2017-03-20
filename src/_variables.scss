@@ -1,27 +1,28 @@
 // basic color
-$primary-color: #4CAF50; // mdl-color--green-500
-$primary-text-color: #404040;
-$secondary-text-color: #777777;
+$primary-color: #66BB6A; // mdl-color--green-400
+$primary-text-color: #E0E0E0;
+$secondary-text-color: #999;
 
 // Layout
 $max-width: 700px;
 
 // Article
-$bg-color: #fafafa; // background color
+$bg-color: #383838; // background color
 $fg-color: $primary-text-color; // text color
 $info-title-color: #101010;
-$info-text-color: #bbb;
+$info-text-color: #888;
 $basic-font-size: 18px;
 
 // header
 $header-margin: 30px;
-$header-font-color: $primary-text-color; // header text color
+$header-font-color: darken($primary-text-color, 5%); // header text color
 $header-img-size-large: 100px;
 $header-img-size-small: 60px;
 $header-font-size: 20px;
+$header-decoration-color: #474747;
 
 // footer
-$footer-font-color: #c5c5c5; // footer text color
+$footer-font-color: #666; // footer text color
 $footer-font-size: 15px;
 
 // list header

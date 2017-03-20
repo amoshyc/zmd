@@ -12,7 +12,7 @@
         content: $content;
         position: absolute;
         margin-left: -50px;
-        color: #ddd;
+        color: #555;
         font-size: 65%;
     }
 }
@@ -20,15 +20,15 @@
 .util-block {
     min-width: 200px;
     margin: 10px 0px 10px $basic-font-size;
-    border: 1px solid #e3e3e3;
-    background-color: darken($bg-color, 2%);
+    border: 1px solid $bg-color;
+    background-color: lighten($bg-color, 5%);
     clear: both;
 }
 
 .util-block-title {
     padding: 7px 15px;
     color: $fg-color;
-    background-color: darken($bg-color, 5%);
+    background-color: #545454;
     font-size: $basic-font-size;
     line-height: $basic-font-size;
     font-family: 'Bitter', sans;
@@ -36,29 +36,4 @@
 
 .util-block-content {
     margin: $basic-font-size $basic-font-size;
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-
-    /* Support for IE. */
-    font-feature-settings: 'liga';
 }

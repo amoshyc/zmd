@@ -22,13 +22,13 @@ main {
     font-size: $list-header-size;
     font-family: 'Roboto Slab', sans;
     line-height: $list-header-size * 1.7;
-    background: linear-gradient(to right, #aaa, #fff);
+    background: linear-gradient(to right, $secondary-text-color, $bg-color);
     background-position: bottom left;
-    background-size: 50% 1px;
+    background-size: 50% 1.5px;
     background-repeat: no-repeat;
 }
 
 ::selection {
     color: white;
-    background-color: #4cae7b;
+    background-color: #009999;
 }

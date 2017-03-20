@@ -1,7 +1,7 @@
 footer {
     max-width: $max-width;
     margin: 30px auto;
-    background: radial-gradient(#ccc, #fff);
+    background: radial-gradient($footer-font-color, $bg-color);
     background-position: top center;
     background-size: 100% 1px;
     background-repeat: no-repeat;

@@ -24,7 +24,7 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        border: 1px solid #ccc;
+        // border: 1px solid #333;
     }
     .caption {
         font-size: 90%;
@@ -91,13 +91,13 @@
     pre.literal-block {
         margin: 25px 0px;
         padding: 10px 10px;
-        border: 1px solid #ccc;
+        border: 1px solid $bg-color;
         overflow: auto;
         white-space: pre-wrap;
         font-family: 'Oxygen Mono', monospace;
         font-size: 85%;
         line-height: 0.85 * 1.35;
-        background-color: lighten($bg-color, 2%);
+        background-color: lighten($bg-color, 3%);
     }
 
     pre.doctest-block {
@@ -107,7 +107,7 @@
     .line-block {
         margin: $basic-font-size * 0.7 0px;
         padding-left: 2 * $basic-font-size;
-        border-left: 2px solid #ddd;
+        border-left: 2px solid $secondary-text-color;
 
         .line {
             line-height: 150%;
@@ -127,25 +127,27 @@
         font-size: 100%;
 
         th, td {
-            border: 1px solid #ccc;
+            border: 2px solid $bg-color;
             padding: 10px;
             text-align: left;
         }
 
         tbody {
-            border-top: 2px double #ccc;
+            border-top: 2px double $bg-color;
         }
 
         thead {
             tr {
-                color: black;
-                background-color: $bg-color;
+                color: $fg-color;
+                background-color: lighten($bg-color, 3%);
             }
         }
 
         tbody {
+            color: $fg-color;
+            background-color: lighten($bg-color, 3%);
             tr:nth-child(odd) {
-                background-color: #f4f4f4;
+                background-color: lighten($bg-color, 5%);
             }
         }
     }
@@ -179,7 +181,7 @@
 
             div.linenodiv {
                 pre {
-                    color: #ddd;
+                    color: #888;
                     background-color: $bg-color;
                     font-size: 80%;
                     vertical-align: middle;
@@ -303,8 +305,8 @@
             @extend .util-block-title;
             margin: 0px;
             color: white;
-            background-color: #9E9E9E;
-            border: 1px solid #9E9E9E;
+            background-color: #545454;
+            border: 1px solid #545454;
         }
 
         & > *:not(.admonition-title) {

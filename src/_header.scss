@@ -2,20 +2,27 @@ header { // header container
     display: flex;
     flex-direction: column;
     max-width: $max-width;
-    margin: $header-margin auto;
     text-align: center;
-    // opacity: 0.75;
-    // transition: opacity 0.2s ease-in-out;
-    //
-    // &:hover {
-    //     opacity: 1.0;
-    // }
+    margin: $header-margin auto;
+    // margin: 0 auto $header-margin auto;
+    // padding-top: $header-margin;
+    // background: linear-gradient(to bottom,
+    //     $header-decoration-color $header-margin, $bg-color $header-margin);
+
+    div.image-wrap {
+        // background: linear-gradient(to bottom, $header-decoration-color 50%, $bg-color 50%);
+    }
 
     a.image {
         img {
             width: $header-img-size-large;
             height: $header-img-size-large;
             border-radius: $header-img-size-large / 2;
+            border: 2px solid #ddd;
+
+            &:hover {
+                filter: brightness(1.15);
+            }
         }
     }
 
@@ -36,10 +43,10 @@ header { // header container
         font-family: 'Roboto Slab', serif;
 
         a {
-            color: lighten($header-font-color, 10%);
+            color: darken($header-font-color, 10%);
             text-decoration: none;
             &:hover {
-                color: lighten($header-font-color, 30%);
+                color: lighten($header-font-color, 10%);
             }
         }
 
