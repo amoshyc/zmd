@@ -38,3 +38,6 @@ jspm_packages
 
 # Ignore customized virtual environment
 ./nvm.sh
+
+# Profile image
+static/me.*

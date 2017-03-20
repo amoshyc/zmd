@@ -1,8 +1,8 @@
-{% macro header(SITEURL, SITENAME, LINKS) %}
+{% macro header(SITEURL, SITENAME, LINKS, ZMD_PROFILE_IMAGE) %}
     <header>
         <div>
             <a class="image" href="{{ SITEURL }}/">
-                <img class="large" src="{{ SITEURL }}/theme/header-image.jpg">
+                <img class="large" src="{{ SITEURL }}/theme/{{ ZMD_PROFILE_IMAGE }}">
             </a>
         </div>
         <div>
