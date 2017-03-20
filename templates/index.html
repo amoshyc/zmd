@@ -4,11 +4,6 @@
     {{ SITENAME }}
 {% endblock %}
 
-{% block header %}
-    {% from "macro/header.html" import header %}
-    {{ header(SITEURL, SITENAME, LINKS, ZMD_PROFILE_IMAGE) }}
-{% endblock %}
-
 {% block content %}
     {% from "macro/list-entry.html" import list_entry %}
     {% for article in articles_page.object_list %}
