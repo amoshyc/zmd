@@ -224,10 +224,6 @@
         }
     }
 
-    div.contents { // TOC
-        // font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC';
-    }
-
     a.toc-backref {
         color: $fg-color;
         text-decoration: none;
@@ -340,17 +336,6 @@
     .topic-title, .rubric {
         font-weight: bold;
         font-size: 105%;
-    }
-
-    // toc
-    div.contents {
-        margin-top: 20px;
-        .topic-title {
-            font-weight: normal;
-        }
-        ul {
-            margin-top: 0px;
-        }
     }
 
     hr {
