@@ -55,7 +55,7 @@
     }
 
     ul.toc-container {
-        margin: 16px 16px;
+        margin: 16px 16px 0px $basic-font-size*(-1);
         padding-left: $basic-font-size;
 
         a {

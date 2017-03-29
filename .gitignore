@@ -36,5 +36,8 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+# Ignore customized virtual environment
+nvm.sh
+
 # Profile image
 static/me.*

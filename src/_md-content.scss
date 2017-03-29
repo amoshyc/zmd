@@ -1,2 +1,169 @@
 .md-content {
+    color: $fg-color;
+    font-family: 'Bitter', 'Source Han Sans TW', 'Noto Sans TC'; // last one is web font
+    font-size: $basic-font-size;
+    line-height: $basic-font-size;
+
+    p {
+        color: $fg-color;
+        margin: 0px 0px 0px 0px;
+        white-space: pre-wrap;
+        font-size: 105%;
+        line-height: 150%;
+        // text-align: justify;
+        letter-spacing: 0.4px;
+        word-spacing: 2.4px;
+    }
+
+    p + p {
+        margin-top: $basic-font-size * 1.4;
+    }
+
+    img {
+        max-width: 90vw;
+        margin: 20px 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #ccc;
+    }
+    img + img {
+        margin-top: 0px;
+    }
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        &:hover {
+            color: lighten($primary-color, 10%);
+        }
+    }
+
+    ol, ul {
+        padding-left: 2 * $basic-font-size;
+
+        li {
+            line-height: 150%;
+        }
+    }
+
+    h1 { @include util-header('H1', 175%); }
+
+    h2 { @include util-header('H2', 150%); }
+
+    h3 { @include util-header('H3', 140%); }
+
+    h4 { @include util-header('H4', 130%); }
+
+    h5 { @include util-header('H5', 120%); }
+
+    h6 { @include util-header('H6', 110%); }
+
+    blockquote {
+        margin: $basic-font-size * 0.7 0px;
+        padding-left: 2 * $basic-font-size;
+    }
+
+    code {
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 85%;
+        color: #F57C00; // mdl orange 700
+    }
+
+    table {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        font-size: 100%;
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        tbody {
+            border-top: 2px double #ccc;
+        }
+
+        thead {
+            tr {
+                color: black;
+                background-color: $bg-color;
+            }
+        }
+
+        tbody {
+            tr:nth-child(odd) {
+                background-color: #f4f4f4;
+            }
+        }
+    }
+
+    table + table {
+        margin-top: 30px;
+    }
+
+    table.highlighttable {
+        @extend .pygments;
+        margin-left: -40px;
+        border: none;
+        font-size: 100%;
+        max-width: 95vw;
+
+        tbody, tr, td, pre, div {
+            padding: 0px;
+            border: none;
+        }
+
+        pre {
+            margin: 10px 0px;
+            font-size: 85%;
+            line-height: $basic-font-size * 0.85 * 1.30;
+            font-family: 'Oxygen Mono', monospace;
+        }
+
+        td.linenos {
+            vertical-align: top;
+            background-color: $bg-color;
+
+            div.linenodiv {
+                pre {
+                    color: #ddd;
+                    background-color: $bg-color;
+                    font-size: 80%;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: 40px;
+                }
+            }
+        }
+
+        td.code {
+            vertical-align: top;
+
+            div.highlight {
+                padding: 0px 10px;
+                max-width: $max-width;
+                min-width: $max-width;
+                overflow-x: auto;
+                // border: 1px solid #ccc;
+                // border will overlap scrollbar, so I use outline instead
+                outline: 1px solid #a8a8a8;
+                background-color: #fff;
+            }
+        }
+    }
+
+    // footnote
+    a.footnote-ref{
+        vertical-align: super;
+        text-decoration: none;
+        font-size: 95%;
+    }
+
+    hr {
+        margin: 24px 0px;
+        border-color: rgba(255, 255, 255, 0.4);
+    }
 }
