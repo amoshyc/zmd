@@ -27,13 +27,6 @@
         transform: translateX(-50%);
         border: 1px solid #ccc;
     }
-    .caption {
-        font-size: 90%;
-        // text-align: center;
-    }
-    div.legend {
-        font-size: 90%;
-    }
     img + img {
         margin-top: 0px;
     }
@@ -54,18 +47,6 @@
         }
     }
 
-    dl.docutils {
-        dt {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        dd {
-            margin: 20px 0px 2s0px 2 * $basic-font-size;
-        }
-    }
-
     h1 { @include util-header('H1', 175%); }
 
     h2 { @include util-header('H2', 150%); }
@@ -78,47 +59,15 @@
 
     h6 { @include util-header('H6', 110%); }
 
-    ol, ul {
-        // margin-top: $basic-font-size;
-        // margin-bottom: $basic-font-size;
-    }
-
-    tt { // inline literal
-        color: #F57C00; // mdl orange 700
-        font-family: 'Oxygen Mono', monospace;
-        font-size: 95%;
-    }
-
-    pre.literal-block {
-        margin: 25px 0px;
-        padding: 10px 10px;
-        border: 1px solid #ccc;
-        overflow: auto;
-        white-space: pre-wrap;
-        font-family: 'Oxygen Mono', monospace;
-        font-size: 85%;
-        line-height: 0.85 * 1.35;
-        background-color: lighten($bg-color, 2%);
-    }
-
-    pre.doctest-block {
-        @extend .literal-block;
-    }
-
-    .line-block {
-        margin: $basic-font-size * 0.7 0px;
-        padding-left: 2 * $basic-font-size;
-        border-left: 2px solid #ddd;
-
-        .line {
-            line-height: 150%;
-            white-space: pre-wrap;
-        }
-    }
-
     blockquote {
         margin: $basic-font-size * 0.7 0px;
         padding-left: 2 * $basic-font-size;
+    }
+
+    code {
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 85%;
+        color: #F57C00; // mdl orange 700
     }
 
     table {
@@ -206,165 +155,15 @@
         }
     }
 
-    table.field-list {
-        font-size: 80%;
-        border: none;
-        color: $fg-color;
-
-        tbody, th, tr, td {
-            border: none;
-            background-color: $bg-color;
-        }
-
-        p {
-            margin: 0px;
-        }
-    }
-
-    table.option-list {
-        border: 1px solid #ccc;
-        tbody {
-            border: none;
-        }
-    }
-
-    div.contents { // TOC
-        // font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC';
-    }
-
-    a.toc-backref {
-        color: $fg-color;
-        text-decoration: none;
-    }
-
-    // footnote, citation
-    a.footnote-reference, a.citation-reference {
+    // footnote
+    a.footnote-ref{
         vertical-align: super;
         text-decoration: none;
-        font-size: 70%;
-    }
-    table.footnote, table.citation {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        td {
-            background-color: $bg-color;
-            font-size: 85%;
-            line-height: 135%;
-            color: #999;
-            border: none;
-        }
-        a.fn-backref {
-            text-decoration: none;
-        }
-        em {
-            font-style: normal;
-            padding-right: 5px;
-        }
-        p {
-            color: #999;
-            line-height: 135%;
-        }
-    }
-
-    // list style
-    ol.upperroman { list-style-type: upper-roman; }
-    ol.lowerroman { list-style-type: lower-roman; }
-    ol.loweralpha { list-style-type: lower-alpha; }
-    ol.upperalpha { list-style-type: upper-alpha; }
-
-    .sidebar {
-        @extend .util-block;
-        float: right;
-        clear: right;
-        max-width: 50%;
-
-        .sidebar-title {
-            @extend .util-block-title;
-            font-size: 110%;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin: 0px;
-        }
-
-        .sidebar-subtitle {
-            font-size: 100%;
-        }
-
-        & > *:not(.sidebar-title) {
-            @extend .util-block-content;
-        }
-    }
-
-    .admonition {
-        @extend .util-block;
-        margin: 20px 0px;
-        // border-color: $bg-color;
-
-        .admonition-title {
-            @extend .util-block-title;
-            margin: 0px;
-            color: white;
-            background-color: #9E9E9E;
-            border: 1px solid #9E9E9E;
-        }
-
-        & > *:not(.admonition-title) {
-            @extend .util-block-content;
-        }
-    }
-
-    .attention, .caution, .warning {
-        .admonition-title {
-            background-color: #FFC107;
-            border: 1px solid #FFC107;
-        }
-    }
-
-    .danger, .error {
-        .admonition-title {
-            background-color: #f44336;
-            border: 1px solid #f44336;
-        }
-    }
-
-    .note, .tip, .hint {
-        .admonition-title {
-            background-color: #64B5F6;
-            border: 1px solid #64B5F6;
-        }
-    }
-
-    .important {
-        .admonition-title {
-            background-color: #009688;
-            border: 1px solid #009688;
-        }
-    }
-
-    .topic-title, .rubric {
-        font-weight: bold;
-        font-size: 105%;
-    }
-
-    // toc
-    div.contents {
-        margin-top: 20px;
-        .topic-title {
-            font-weight: normal;
-        }
-        ul {
-            margin-top: 0px;
-        }
+        font-size: 95%;
     }
 
     hr {
         margin: 24px 0px;
         border-color: rgba(255, 255, 255, 0.4);
-    }
-
-    code {
-        font-family: 'Oxygen Mono', monospace;
-        font-size: 85%;
-        color: #F57C00;
     }
 }
