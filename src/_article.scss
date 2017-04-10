@@ -6,11 +6,13 @@
         color: $info-title-color;
         margin: 0px 0px;
         @include util-header('H1', 175%);
-        line-height: $basic-font-size * 3.0;
+        line-height: 120%;
         border: none;
     }
 
     .top {
+        margin-bottom: 4px;
+
         .time {
             color: $info-text-color;
             font-size: $basic-font-size * 0.8;
@@ -38,6 +40,8 @@
     }
 
     .bottom {
+        margin-top: 9px;
+
         a {
             font-family: 'Bitter', sans-serif;
             font-size: $basic-font-size * 0.8;
